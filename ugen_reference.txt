@@ -163,6 +163,12 @@ Args: trig (f), index (f), sr (f), ini (s), wav (s)
 Output: f
 Description: Nanosamp sampler. See soundpipe docs.
 ---
+---
+Name: pitchamdf
+Args: min_freq(i), max_freq(j)
+Output: freq, rms
+Description: Pitch detection using AMDF method.
+---
 Name: prop
 Args: bpm (f), prop string (s)
 Output: f
