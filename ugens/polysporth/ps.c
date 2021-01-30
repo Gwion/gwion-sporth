@@ -241,7 +241,7 @@ static SPFLOAT compute_sample(polysporth *ps, int id)
     sporthlet *spl = &ps->spl[id];
     plumber_data *pd = &ps->pd;
 
-    if(spl->state != PS_NULL || spl->state != PS_OFF) {
+    if(spl->state != PS_NULL && spl->state != PS_OFF) {
         ps->pd.tmp = &spl->pipes;
         plumbing_compute(pd, &spl->pipes, PLUMBER_COMPUTE);
         out = sporth_stack_pop_float(&pd->sporth.stack);
